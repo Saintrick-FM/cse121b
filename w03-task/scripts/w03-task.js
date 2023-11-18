@@ -101,10 +101,12 @@ document.querySelector("#evens").innerHTML = evenNumbers;
 
 /* Output Sum of Org. Array */
 const sumOfArray = numbersArray.reduce((sum, number) => sum + number);
-document.getElementById("sumOfArray").innerHTML = sumOfArray;
+document.querySelector("#sumOfArray").innerHTML = sumOfArray;
 
 /* Output Multiplied by 2 Array */
 const multipliedArray = numbersArray.map((number) => number * 2);
+document.querySelector("#multiplied").innerHTML = multipliedArray;
+
 /* Output Sum of Multiplied by 2 Array */
 const sumOfMultiplied = multipliedArray.reduce(
   (sum, number) => sum + number
