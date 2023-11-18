@@ -69,16 +69,16 @@ document
 
 /* Decision Structure */
 document.querySelector("#getTotal").addEventListener("click", function () {
-  const subtotalValue = Number(document.querySelector("#subtotal").value);
+  const subtotalValue = document.querySelector("#subtotal").value;
   if (!isNaN(subtotalValue) && isFinite(subtotalValue)) {
-    console.log("Valid Subtotal Value:", subtotalValue);
     const membershipCheckbox = document.querySelector("#member");
-
+    
     const totalSpan = document.querySelector("#total");
-    const subtotal = parseFloat(subtotalInput.value) || 0;
+    const subtotal = parseFloat(subtotalValue) || 0;
     const discount = membershipCheckbox.checked ? 0.15 : 0;
-
+    
     const discountedTotal = subtotal * (1 - discount);
+    
     totalSpan.innerHTML = `$ ${discountedTotal.toFixed(2)}`;
   } else {
     console.error(
@@ -90,13 +90,14 @@ document.querySelector("#getTotal").addEventListener("click", function () {
 /* Output Source Array */
 const numbersArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
 /* Output Odds Only Array */
-document.querySelector("#array").innerHTML = numbersArray.join(", ");
+document.querySelector("#array").innerHTML = numbersArray;
 const oddNumbers = numbersArray.filter((number) => number % 2 === 1);
-document.querySelector("#evens").innerHTML = oddNumbers.join(", ");
+console.log("oddNumbers ",oddNumbers)
+document.querySelector("#odds").innerHTML = oddNumbers;
 
 /* Output Evens Only Array */
 const evenNumbers = numbersArray.filter((number) => number % 2 === 0);
-document.querySelector("#evens").innerHTML = evenNumbers.join(", ");
+document.querySelector("#evens").innerHTML = evenNumbers;
 
 /* Output Sum of Org. Array */
 const sumOfArray = numbersArray.reduce((sum, number) => sum + number);
@@ -106,10 +107,9 @@ document.getElementById("sumOfArray").innerHTML = sumOfArray;
 const multipliedArray = numbersArray.map((number) => number * 2);
 /* Output Sum of Multiplied by 2 Array */
 const sumOfMultiplied = multipliedArray.reduce(
-  (sum, number) => sum + number,
-  0
+  (sum, number) => sum + number
 );
 
 // Assign the result to the HTML element with an ID of sumOfMultiplied
-document.getElementById("sumOfMultiplied").textCinnerHTMLontent =
-  sumOfMultiplied;
+
+document.getElementById("sumOfMultiplied").textContent = sumOfMultiplied;
