@@ -2,8 +2,6 @@
 
 /* FUNCTIONS */
 /* Function Definition - Add Numbers */
-const addNumber1 = Number(document.querySelector("#add1").value);
-const addNumber2 = Number(document.querySelector("#add2").value);
 
 function add(number1, number2) {
   return number1 + number2;
@@ -12,12 +10,13 @@ function add(number1, number2) {
 function addNumbers() {
   const addNumber1 = Number(document.querySelector("#add1").value);
   const addNumber2 = Number(document.querySelector("#add2").value);
-
   const result = add(addNumber1, addNumber2);
+  console.log("result - ",addNumber1,addNumber2, result)
   document.querySelector("#sum").value = result;
 }
-
+console.log("hello")
 document.querySelector("#addNumbers").addEventListener("click", addNumbers);
+
 
 /* Function Expression - Subtract Numbers */
 
@@ -25,7 +24,7 @@ const subtract = function (number1, number2) {
   return number1 - number2;
 };
 
-const subtractNumbers = function (subtractNumber1, subtractNumber2) {
+const subtractNumbers = function () {
   const subtractNumber1 = Number(document.querySelector("#subtract1").value);
   const subtractNumber2 = Number(document.querySelector("#subtract2").value);
   document.querySelector("#difference").value = subtract(
