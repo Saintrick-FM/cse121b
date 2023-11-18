@@ -34,15 +34,17 @@ const subtractNumbers = function () {
 };
 document
   .querySelector("#subtractNumbers")
-  .addEventListener("click", subtractNumbers());
+  .addEventListener("click", subtractNumbers);
 
 /* Arrow Function - Multiply Numbers */
-const factor1 = Number(document.querySelector("#factor1").value);
-const factor2 = Number(document.querySelector("#factor2").value);
-const multiply = (number1, number2) => number1 * number2;
+const multiply = () => {
+  const number1 = Number(document.querySelector("#factor1").value);
+  const number2 = Number(document.querySelector("#factor2").value);
+  return number1 * number2;
+}
 
 const multiplyNumbers = () => {
-  document.querySelector("#product").value = multiply(factor1, factor2);
+  document.querySelector("#product").value = multiply();
   return;
 };
 document
