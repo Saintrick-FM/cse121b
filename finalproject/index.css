@@ -1,0 +1,72 @@
+#gridly h1 {
+  margin: 0 auto;
+  margin-top: 80px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: navy;
+  text-align: center;
+  margin-top: 25px;
+}
+
+h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+header {
+  margin-top: 70px;
+}
+
+#sortBy {
+  appearance: none;
+  display: flex;
+  padding: 0.5rem;
+  background-color: #eee;
+  color: #444;
+  font-weight: 700;
+  margin: 1rem auto;
+  width: 200px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+#sortBy option:disabled {
+  font-style: italic;
+  padding: 1rem;
+  background-color: #111;
+  color: #eee;
+}
+
+#temples {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+#temples article {
+  height: 250px;
+  margin: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  background-color: #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#temples h4 {
+  color: navy;
+  font-size: smaller;
+}
+
+#temples img {
+  width: 250px;
+  height: auto;
+  box-shadow: 0 0 30px #777;
+  margin: 0.5rem;
+}

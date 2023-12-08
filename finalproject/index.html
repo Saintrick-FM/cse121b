@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quote Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="header">
+        <h1>Final project: Quote Generator</h1>
+        <h2>Fetch(): Some Famous Quotes</h2>
+
+        <label for="standard-select" id="label">Filter Quotes</label>
+        <div class="select">
+          <select id="standard-select" title="Choose a data filter.">
+            <option value="" disabled selected>Select an author</option>
+            <option value="thomas-edison">Thomas Edison</option>
+            <option value="charles-dickens">Charles Dickens</option>
+            <option value="albert-einstein">Albert Einstein</option>
+            <option value="all">No Filter</option>
+          </select>
+          <span class="focus"></span>
+        </div>
+      </div>
+
+      <h1 id="loading" style="display: none">Loading...</h1>
+      <div class="container"></div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
